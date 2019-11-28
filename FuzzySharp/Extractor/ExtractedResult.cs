@@ -7,16 +7,16 @@ namespace FuzzySharp.Extractor
     {
 
         public readonly T Value;
-        public readonly int Score;
+        public readonly double Score;
         public readonly int Index;
 
-        public ExtractedResult(T value, int score)
+        public ExtractedResult(T value, double score)
         {
             Value = value;
             Score = score;
         }
 
-        public ExtractedResult(T value, int score, int index)
+        public ExtractedResult(T value, double score, int index)
         {
             Value = value;
             Score = score;
@@ -25,7 +25,7 @@ namespace FuzzySharp.Extractor
 
         public int CompareTo(ExtractedResult<T> other)
         {
-            return Comparer<int>.Default.Compare(this.Score, other.Score);
+            return Comparer<double>.Default.Compare(this.Score, other.Score);
         }
 
         public override string ToString()

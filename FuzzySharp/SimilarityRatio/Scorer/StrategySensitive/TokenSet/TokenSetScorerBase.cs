@@ -7,7 +7,7 @@ namespace FuzzySharp.SimilarityRatio.Scorer.StrategySensitive
 {
     public abstract class TokenSetScorerBase : StrategySensitiveScorerBase
     {
-        public override int Score(string input1, string input2)
+        public override double Score(string input1, string input2)
         {
             var tokens1 = new HashSet<string>(Regex.Split(input1, @"\s+").Where(s => s.Any()));
             var tokens2 = new HashSet<string>(Regex.Split(input2, @"\s+").Where(s => s.Any()));

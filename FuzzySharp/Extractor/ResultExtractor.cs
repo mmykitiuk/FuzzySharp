@@ -14,7 +14,7 @@ namespace FuzzySharp.Extractor
             var processedQuery = processor(query);
             foreach (var choice in choices)
             {
-                int score = scorer.Score(processedQuery, processor(choice));
+                double score = scorer.Score(processedQuery, processor(choice));
                 if (score >= cutoff)
                 {
                     yield return new ExtractedResult<T>(choice, score, index);

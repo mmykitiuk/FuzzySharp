@@ -7,7 +7,7 @@ namespace FuzzySharp.SimilarityRatio.Scorer.StrategySensitive
 {
     public abstract class TokenAbbreviationScorerBase : StrategySensitiveScorerBase
     {
-        public override int Score(string input1, string input2)
+        public override double Score(string input1, string input2)
         {
             string shorter;
             string longer;

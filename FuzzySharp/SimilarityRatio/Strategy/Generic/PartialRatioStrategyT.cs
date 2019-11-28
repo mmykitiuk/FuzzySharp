@@ -7,7 +7,7 @@ namespace FuzzySharp.SimilarityRatio.Strategy.Generic
 {
     internal class PartialRatioStrategy<T> where T : IEquatable<T>
     {
-        public static int Calculate(T[] input1, T[] input2)
+        public static double Calculate(T[] input1, T[] input2)
         {
             T[] shorter;
             T[] longer;
@@ -49,7 +49,7 @@ namespace FuzzySharp.SimilarityRatio.Strategy.Generic
 
             }
 
-            return (int)Math.Round(100 * scores.Max());
+            return (double)Math.Round(100 * scores.Max());
         }
     }
 }
